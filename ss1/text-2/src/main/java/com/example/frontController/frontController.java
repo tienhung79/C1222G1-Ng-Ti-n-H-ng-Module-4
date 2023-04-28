@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class frontController {
-    IService service = new Service();
+  private IService service = new Service();
     @GetMapping("/result")
     public String disPlay(@RequestParam(defaultValue = "0",name = "englishCheck")String englishCheck, Model model){
         String result = service.check(englishCheck);
