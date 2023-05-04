@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.service.IService;
-import com.example.service.Service;
+import com.example.service.iml.Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
