@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 @Repository
 public class RepositoryMail implements IRepositoryMail {
-    private  Mail mail = new Mail("English",25,"","King,Asgard");
+    private  Mail mail = new Mail("English",25,true,"King,Asgard");
     private static List<String> languages = new ArrayList<>();
     private static List<Integer> pageSize = new ArrayList<>();
     static {

@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <td><strong>Spams fillter:</strong></td>
-            <td><form:checkbox path="spamsFillter" value="Enable spams filter"/> Enable spams filter </td>
+            <td><form:checkbox path="spamsFillter" /> Enable spams filter </td>
         </tr>
         <tr>
             <td><strong>Signature:</strong></td>

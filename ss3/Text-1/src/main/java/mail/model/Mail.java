@@ -3,13 +3,13 @@ package mail.model;
 public class Mail {
     private String languages;
     private int pageSize;
-    private String spamsFillter;
+    private Boolean spamsFillter;
     private String signature;
 
     public Mail() {
     }
 
-    public Mail(String languages, int pageSize, String spamsFillter, String signature) {
+    public Mail(String languages, int pageSize, Boolean spamsFillter, String signature) {
         this.languages = languages;
         this.pageSize = pageSize;
         this.spamsFillter = spamsFillter;
@@ -32,11 +32,11 @@ public class Mail {
         this.pageSize = pageSize;
     }
 
-    public String getSpamsFillter() {
+    public Boolean getSpamsFillter() {
         return spamsFillter;
     }
 
-    public void setSpamsFillter(String spamsFillter) {
+    public void setSpamsFillter(Boolean spamsFillter) {
         this.spamsFillter = spamsFillter;
     }
 
