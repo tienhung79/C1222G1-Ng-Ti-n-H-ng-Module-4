@@ -15,4 +15,5 @@ public interface IRepositoryProduct {
 
     void create(Product product);
 
+    List<Product> findByName(String name);
 }

@@ -57,7 +57,8 @@ public class ControllerProduct {
 
     @GetMapping("/findByName")
     public String findByName(Model model, @RequestParam(value = "name", required = false) String name) {
-//        List<Product> productList = serviceProduct.getProductByName(name);
-        return "redirect:/product";
+        List<Product> productList = serviceProduct.getProductByName(name);
+        model.addAttribute("productList", productList);
+        return "/view";
     }
 }

@@ -37,4 +37,9 @@ public class ServiceProduct implements IServiceProduct {
     public void createProduct(Product product) {
         repositoryProduct.create(product);
     }
+
+    @Override
+    public List<Product> getProductByName(String name) {
+        return repositoryProduct.findByName(name);
+    }
 }

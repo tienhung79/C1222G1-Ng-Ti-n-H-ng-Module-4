@@ -14,4 +14,7 @@ public interface IServiceProduct {
     void delete(int id);
 
     void createProduct(Product product);
+
+
+    List<Product> getProductByName(String name);
 }
