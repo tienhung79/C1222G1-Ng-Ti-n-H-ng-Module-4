@@ -50,4 +50,10 @@ public class RepositoryProduct implements IRepositoryProduct {
             }
         }
     }
+
+    @Override
+    public void create(Product product) {
+        int id = productList.size()+1;
+        productList.add(new Product(id,product.getName(),product.getPrice()));
+    }
 }

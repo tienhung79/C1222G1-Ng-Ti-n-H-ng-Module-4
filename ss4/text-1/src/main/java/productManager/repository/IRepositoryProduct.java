@@ -12,4 +12,7 @@ public interface IRepositoryProduct {
     void update(Product product);
 
     void delete(int id);
+
+    void create(Product product);
+
 }

@@ -32,4 +32,9 @@ public class ServiceProduct implements IServiceProduct {
     public void delete(int id) {
         repositoryProduct.delete(id);
     }
+
+    @Override
+    public void createProduct(Product product) {
+        repositoryProduct.create(product);
+    }
 }
