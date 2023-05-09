@@ -36,6 +36,8 @@ public class RepositoryProduct implements IRepositoryProduct {
            return session.createQuery("from Product where id = :id", Product.class).setParameter("id",id).getSingleResult();
         }catch (Exception exception){
             throw new RuntimeException(exception);
+        }finally {
+            session.close();
         }
     }
 
@@ -103,20 +105,14 @@ public class RepositoryProduct implements IRepositoryProduct {
 
     @Override
     public List<Product> findByName(String name) {
-//        Session session =null;
-//        List<Product> productList = new ArrayList<>();
-//        try {
-//            session = ConnentionUtil.sessionFactory.openSession();
-//            Product product= session.createQuery("from Product where name like concat('%',:name,'%')", Product.class).setParameter("name", name).getSingleResult();
-//            while (session.)
-//                productList.add(product);
-//        }catch (Exception exception){
-//            throw new RuntimeException(exception);
-//        }finally {
-//            session.close();
-//        }
-//        return productList;
-//    }
-        return null;
+        Session session =null;
+        try {
+            session = ConnentionUtil.sessionFactory.openSession();
+           return session.createQuery("from Product where name like concat('%',:name,'%')", Product.class).setParameter("name", name).getResultList();
+        }catch (Exception exception){
+            throw new RuntimeException(exception);
+        }finally {
+            session.close();
+        }
     }
 }
