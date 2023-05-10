@@ -18,4 +18,24 @@ public class ServiceBlog implements IServiceBlog {
     public List<Blog> getAllBlog() {
         return repositoryBlog.findAll();
     }
+
+    @Override
+    public void creatBlog(Blog blog) {
+        repositoryBlog.save(blog);
+    }
+
+    @Override
+    public Blog getBlogById(int id) {
+        return repositoryBlog.getById(id);
+    }
+
+    @Override
+    public void update(Blog blog) {
+        repositoryBlog.save(blog);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        repositoryBlog.deleteById(id);
+    }
 }

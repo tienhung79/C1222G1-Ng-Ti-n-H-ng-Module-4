@@ -9,6 +9,7 @@ public class Blog {
     private int id;
     private String nameBlog;
     private String contentBlog;
+
     @ManyToOne
     @JoinColumn(name = "cagetory_id",referencedColumnName = "id")
     private CategoryBlog categoryBlog;

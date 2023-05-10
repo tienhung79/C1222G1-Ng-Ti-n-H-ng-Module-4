@@ -13,8 +13,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ControllerCategoryBlog {
     @Autowired
     private IServiceCategory serviceCategory;
-//    private Blog blog;
-
-
 
 }
