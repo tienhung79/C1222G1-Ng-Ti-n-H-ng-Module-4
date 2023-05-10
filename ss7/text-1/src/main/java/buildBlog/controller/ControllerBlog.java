@@ -4,12 +4,13 @@ import buildBlog.model.Blog;
 import buildBlog.service.IServiceBlog;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @Controller
@@ -23,7 +24,8 @@ public class ControllerBlog {
     public String disPlayBlog(Model model, @PageableDefault(size = 1)Pageable pageable){
 //        Pageable<Blog> blogList = serviceBlog.getAllBlog(pageable);
 //        model.addAttribute("blogList",blogList);
-        model.addAttribute("blogList",serviceBlog.getListBlog(pageable));
+        Page<Blog> blogPage =serviceBlog.getBlogPage(pageable);
+        model.addAttribute("blogList",blogPage);
         return "/view";
     }
    @GetMapping("/creatBlog")

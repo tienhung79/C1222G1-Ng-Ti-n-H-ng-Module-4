@@ -5,9 +5,10 @@ import buildBlog.model.Blog;
 
 import buildBlog.service.IServiceBlog;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @Service
@@ -41,8 +42,8 @@ public class ServiceBlog implements IServiceBlog {
     }
 
     @Override
-    public Object getListBlog(Pageable pageable) {
-        return repositoryBlog.findAll();
+    public Page<Blog> getBlogPage(Pageable pageable) {
+        return repositoryBlog.findAll(pageable);
     }
 
 

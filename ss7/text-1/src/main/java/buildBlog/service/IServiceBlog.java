@@ -1,8 +1,9 @@
 package buildBlog.service;
 
 import buildBlog.model.Blog;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 public interface IServiceBlog {
@@ -15,6 +16,5 @@ public interface IServiceBlog {
 
     void deleteById(int id);
 
-
-    Object getListBlog(Pageable pageable);
+    Page<Blog> getBlogPage(Pageable pageable);
 }
