@@ -4,6 +4,9 @@ import buildBlog.model.Blog;
 import buildBlog.service.IServiceBlog;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +21,11 @@ public class ControllerBlog {
     @Autowired
     private IServiceCategory serviceCategory;
     @GetMapping("/blogHome")
-    public String disPlayBlog(Model model){
-        List<Blog> blogList = serviceBlog.getAllBlog();
-        model.addAttribute("blogList",blogList);
+    public String disPlayBlog(Model model, @PageableDefault(size = 1)Pageable pageable){
+//        Pageable<Blog> blogList = serviceBlog.getAllBlog(pageable);
+//        model.addAttribute("blogList",blogList);
+        Page<Blog> blogPage =serviceBlog.getBlogPage(pageable);
+        model.addAttribute("blogList",blogPage);
         return "/view";
     }
    @GetMapping("/creatBlog")
@@ -52,4 +57,9 @@ public class ControllerBlog {
         serviceBlog.deleteById(id);
        return "redirect:/blog/blogHome";
    }
+//   @GetMapping("/searchByName")
+//    public String searchByName(@RequestParam(value = "name") String name,Model model){
+//      List<Blog> blogList= serviceBlog.searchByName(name);
+//       return "redirect:/blog/blogHome";
+//   }
 }

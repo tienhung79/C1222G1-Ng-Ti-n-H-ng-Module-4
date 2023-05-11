@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<h1 style="text-align: center;">List Login</h1>
+<div class="container">
+    <a name="" id="" class="btn btn-primary" href="/login/creatUser" role="button">Creat</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone of Number</th>
+        <th>Date Of Birth</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="login,interstat:${pageLogin.content}">
+        <td th:text="${login.getId()}"></td>
+        <td th:text="${login.getFirstName()}"></td>
+        <td th:text="${login.getLastName()}"></td>
+        <td th:text="${login.getPhoneNumber()}"></td>
+        <td th:text="${login.getDateOfBirth()}"></td>
+        <td th:text="${login.getEmail()}"></td>
+        <td><a  class="btn btn-primary" th:href="@{/login/updateById/{id}(id=${login.getId()})}"
+               role="button">Update</a></td>
+    </tr>
+    </tbody>
+</table>
+    <div>
+        <a th:href="@{'/login/'(page=${pageLogin.number - 1})}" th:if="${pageLogin.hasPrevious()}">Previous
+        </a>
+        <span th:text="${pageLogin.number + 1}"></span>/
+        <span th:text="${pageLogin.totalPages}"></span>
+        <a th:href="@{'/login/'(page=${pageLogin.number + 1})}" th:if="${pageLogin.hasNext()}">Next
+        </a>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

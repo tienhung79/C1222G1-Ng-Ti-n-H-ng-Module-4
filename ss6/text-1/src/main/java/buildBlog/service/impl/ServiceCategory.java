@@ -16,4 +16,19 @@ public class ServiceCategory implements IServiceCategory {
     public List<CategoryBlog> getAll() {
         return repositoryCagetoryBlog.findAll();
     }
+
+    @Override
+    public CategoryBlog getById(int id) {
+        return repositoryCagetoryBlog.findById(id).get();
+    }
+
+    @Override
+    public void update(CategoryBlog categoryBlog) {
+         repositoryCagetoryBlog.save(categoryBlog);
+    }
+
+    @Override
+    public void deleteById(int id) {
+        repositoryCagetoryBlog.deleteById(id);
+    }
 }
