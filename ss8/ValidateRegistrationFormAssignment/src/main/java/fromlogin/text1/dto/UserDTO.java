@@ -29,7 +29,8 @@ public class UserDTO implements Validator {
 
     @Pattern(regexp = "^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$")
     private String phoneNumber;
-    @Pattern(regexp = "(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}")
+
+//    @Pattern(regexp = "^\\d{1,2}-\\d{1,2}-\\d{4}$")
     @NotNull
     private String dateOfBirth;
 
@@ -107,7 +108,7 @@ public class UserDTO implements Validator {
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         UserDTO userDTO = (UserDTO) target;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyy-MM-dd");
         String date = userDTO.getDateOfBirth();
 
         //convert String to LocalDate

@@ -32,7 +32,7 @@
   <p th:if="${#fields.hasErrors()}" th:errors="*{phoneNumber}"></p>
   <div class="input-group">
     <label for="dateOfBirth">Date Of Birth</label>
-    <input type="text"
+    <input type="date"
            class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth" aria-describedby="helpId" placeholder="">
   </div>
   <p th:if="${#fields.hasErrors()}" th:errors="*{dateOfBirth}"></p>
