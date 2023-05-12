@@ -35,6 +35,7 @@ public class ControllerLogin {
     }
     @PostMapping("/saveUser")
     public String creat(@Validated @ModelAttribute("user") UserDTO userDTO,BindingResult bindingResult, Model model){
+        new UserDTO().validate(userDTO,bindingResult);
         if (bindingResult.hasErrors()) {
             model.addAttribute("user", userDTO);
             return "/creat";
@@ -48,21 +49,22 @@ public class ControllerLogin {
     @GetMapping("/updateById/{id}")
     public String updateById(@PathVariable(value = "id") int id, Model model) {
         User login = serviceLogin.getById(id);
-        UserDTO loginDTO = new UserDTO();
-        BeanUtils.copyProperties(login, loginDTO);
-        model.addAttribute("loginById", loginDTO);
+        UserDTO userDTO = new UserDTO();
+        BeanUtils.copyProperties(login, userDTO);
+        model.addAttribute("userDTO", userDTO);
 //        return "redirect:/login";
         return "/update";
     }
 
     @PostMapping("/update")
-    public String update(@Validated @ModelAttribute("loginById") UserDTO loginDTO, BindingResult bindingResult, Model model) {
+    public String update(@Validated @ModelAttribute("userDTO") UserDTO userDTO, BindingResult bindingResult, Model model) {
+        new UserDTO().validate(userDTO,bindingResult);
         if (bindingResult.hasErrors()) {
-            model.addAttribute("loginById", loginDTO);
+            model.addAttribute("userDTO", userDTO);
             return "/update";
         }
         User login = new User();
-        BeanUtils.copyProperties(loginDTO, login);
+        BeanUtils.copyProperties(userDTO, login);
         serviceLogin.update(login);
         return "redirect:/login";
     }

@@ -1,7 +1,7 @@
-package com.example.text2.controler;
+package com.example.text2.controller;
 
 import com.example.text2.model.Music;
-import com.example.text2.modelDTO.MusicDTO;
+import com.example.text2.model_DTO.MusicDTO;
 import com.example.text2.service.IServiceMusic;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

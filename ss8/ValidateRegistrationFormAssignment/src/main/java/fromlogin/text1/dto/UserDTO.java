@@ -1,11 +1,18 @@
 package fromlogin.text1.dto;
 
+import fromlogin.text1.model.User;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 import javax.validation.constraints.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 
 public class UserDTO implements Validator {
     private int id;
@@ -22,9 +29,8 @@ public class UserDTO implements Validator {
 
     @Pattern(regexp = "^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$")
     private String phoneNumber;
-
+    @Pattern(regexp = "(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}")
     @NotNull
-    @DateTimeFormat(pattern = ("dd-MM-yyyy"))
     private String dateOfBirth;
 
     @NotBlank
@@ -71,7 +77,7 @@ public class UserDTO implements Validator {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String  phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -98,12 +104,18 @@ public class UserDTO implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-//        Login login = (Login) target;
-//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
-//        String date = login.getDateOfBirth();
-//        //convert String to LocalDate
-////        LocalDate localDate = LocalDate.parse(date, formatter);
-//        LocalDate localDate = LocalDate.now();
-//        if (18 > (localDate - date))
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        UserDTO userDTO = (UserDTO) target;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+        String date = userDTO.getDateOfBirth();
+
+        //convert String to LocalDate
+        LocalDate localDate = LocalDate.parse(date, formatter);
+       int yearBirth= localDate.getYear();
+
+        if ((year-yearBirth)<18){
+            errors.rejectValue("dateOfBirth", "dateOfBirth","phai lon hon 18");
+        }
     }
 }

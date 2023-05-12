@@ -1,9 +1,8 @@
-package com.example.text2.modelDTO;
+package com.example.text2.model_DTO;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
