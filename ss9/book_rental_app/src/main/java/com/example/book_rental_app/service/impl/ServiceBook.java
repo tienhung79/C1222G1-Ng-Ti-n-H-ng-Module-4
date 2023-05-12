@@ -16,4 +16,14 @@ public class ServiceBook implements IServiceBook {
     public List<Book> getAll() {
         return repositoryBook.findAll();
     }
+
+    @Override
+    public Book getById(int idBook) {
+        return repositoryBook.findById(idBook).get();
+    }
+
+    @Override
+    public void creatNewBook(Book book) {
+        repositoryBook.save(book);
+    }
 }

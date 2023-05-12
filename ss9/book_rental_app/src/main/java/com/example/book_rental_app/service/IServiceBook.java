@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface IServiceBook {
     List<Book> getAll();
+
+    Book getById(int idBook);
+
+    void creatNewBook(Book book);
 }

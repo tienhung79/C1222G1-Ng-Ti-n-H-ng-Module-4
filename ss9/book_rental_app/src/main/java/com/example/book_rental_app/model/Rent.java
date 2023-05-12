@@ -1,6 +1,8 @@
 package com.example.book_rental_app.model;
 
 import javax.persistence.*;
+import javax.xml.crypto.Data;
+import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -9,12 +11,12 @@ public class Rent {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int code;
-    private String date;
+    private Date date;
 
     public Rent() {
     }
 
-    public Rent(int id, int code, String date) {
+    public Rent(int id, int code, Date date) {
         this.id = id;
         this.code = code;
         this.date = date;
@@ -36,11 +38,11 @@ public class Rent {
         this.code = code;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 }
