@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="346a36fb-10aa-4cf4-b22a-19bc842447b6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/java/com/example/controller/FrontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/java/com/example/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/java/com/example/repository/iml/Reposiory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/java/com/example/service/IService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/java/com/example/service/iml/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/java/com/example/frontController/frontController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/java/com/example/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/java/com/example/repository/iml/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/java/com/example/service/IService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/java/com/example/service/iml/DictionaryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss1/text-2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/controller/SandwichController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/model/Sandwich.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/repository/ISandwichRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/repository/iml/SandwichRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/service/ISanfwichService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/java/sandwich/service/iml/SandwichService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/java/caculator/controller/CaculatorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/java/caculator/service/ICaculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/java/caculator/service/iml/CaculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss2/text-2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/controller/ControllerMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/model/Mail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/repository/IRepositoryMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/repository/impl/RepositoryMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/service/IServiceMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/java/mail/service/impl/ServiceMail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/webapp/WEB-INF/views/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/webapp/WEB-INF/views/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss3/Text-1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/controller/ControllerProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/repository/IRepositoryProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/repository/impl/RepositoryProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/service/IServiceProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/java/productManager/service/impl/ServiceProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/webapp/WEB-INF/views/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss4/text-1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/config/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/config/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/config/ConnentionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/controller/ControllerProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/repository/IRepositoryProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/repository/impl/RepositoryProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/service/IServiceProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/java/productManager/service/impl/ServiceProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/resources/hibernate.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/webapp/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/webapp/WEB-INF/views/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/webapp/WEB-INF/views/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/text-1/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/Text1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/controller/ControllerBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/controller/ControllerCategoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/model/Blog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/model/CategoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/repository/IRepositoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/repository/IRepositoryCagetoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/service/IServiceBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/service/IServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/service/impl/ServiceBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/java/buildBlog/service/impl/ServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/templates/categoryHome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/templates/updateBlog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/templates/updateCategory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/main/resources/templates/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss6/text-1/src/test/java/build_blog/Text1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/Text1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/controller/ControllerBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/controller/ControllerCategoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/model/Blog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/model/CategoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/repository/IRepositoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/repository/IRepositoryCagetoryBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/service/IServiceBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/service/IServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/service/impl/ServiceBlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/java/buildBlog/service/impl/ServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/templates/categoryHome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/templates/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/templates/updateBlog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/templates/updateCategory.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/main/resources/templates/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7/text-1/src/test/java/build_blog/Text1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/Text1Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/controller/ControllerLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/dto/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/repository/IRepositoryLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/service/IServiceLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fromlogin/text1/service/impl/ServiceLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/creat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/loginHome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/fromlogin/text1/Text1ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/Text2Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/controler/ControllerCatergory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/controler/ControllerMusic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/model/Music.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/modelDTO/CategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/modelDTO/MusicDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/repository/IRepositoryCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/repository/IRepositoryMusic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/service/IServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/service/IServiceMusic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/service/impl/ServiceCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/java/com/example/text2/service/impl/ServiceMusic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../text-2/src/test/java/com/example/text2/Text2ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Pd9QC5kbc7kZfrrmTDtEsh1jsD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/C1222G1-NgoTienHung/Module 4/ss8/text-2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "8733250a6ad0007e165f289643dfed34",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Text1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="text-1.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fromlogin.text1.Text1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="346a36fb-10aa-4cf4-b22a-19bc842447b6" name="Changes" comment="" />
+      <created>1683776076715</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683776076715</updated>
+      <workItem from="1683776078368" duration="17553000" />
+      <workItem from="1683808311868" duration="8982000" />
+      <workItem from="1683853928934" duration="2096000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.validation.BeanPropertyBindingResult" memberName="conversionService" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
