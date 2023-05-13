@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ServiceBook implements IServiceBook {
     @Autowired
-    IRepositoryBook repositoryBook;
+    private IRepositoryBook repositoryBook;
     @Override
     public List<Book> getAll() {
         return repositoryBook.findAll();

@@ -9,4 +9,6 @@ public interface IServiceRent {
     void creatNewRent(Rent rent);
 
     List<Rent> getAll();
+
+    int checkCodeToRent();
 }

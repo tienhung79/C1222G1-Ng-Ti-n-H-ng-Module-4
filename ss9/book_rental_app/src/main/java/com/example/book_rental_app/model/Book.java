@@ -17,7 +17,7 @@ public class Book {
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "rent_id")
     )
-    List<Rent> list;
+    private List<Rent> list;
     public Book() {
     }
 

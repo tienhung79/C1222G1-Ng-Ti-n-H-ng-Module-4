@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ServiceRent implements IServiceRent  {
     @Autowired
-    IRepositoryRent repositoryRent;
+   private IRepositoryRent repositoryRent;
 
 
     @Override
@@ -22,5 +22,17 @@ public class ServiceRent implements IServiceRent  {
     @Override
     public List<Rent> getAll() {
         return repositoryRent.findAll();
+    }
+
+    @Override
+    public int checkCodeToRent() {
+        List<Rent> rentList = getAll();
+       int code = (int) (Math.random() * (99999 - 10000) + 10000);
+        for (int i = 0; i < rentList.size(); i++) {
+            if (code == rentList.get(i).getCode()) {
+                code = (int) (Math.random() * (99999 - 10000) + 10000);
+            }
+        }
+        return code;
     }
 }
