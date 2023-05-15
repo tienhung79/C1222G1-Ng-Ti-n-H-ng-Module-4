@@ -10,4 +10,6 @@ public interface IServiceBook {
     Book getById(int idBook);
 
     void creatNewBook(Book book);
+
+    void payBook(Book book);
 }

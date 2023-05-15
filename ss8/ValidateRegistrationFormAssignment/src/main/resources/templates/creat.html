@@ -39,7 +39,7 @@
   <div class="input-group">
     <label for="email">Email</label>
     <input type="email"
-           class="form-control" th:field="*{email}" id="email" aria-describedby="helpId" placeholder="">
+           class="form-control" th:field="*{email}" id="email" aria-describedby="helpId" placeholder="" >
   </div>
   <p th:if="${#fields.hasErrors()}" th:errors="*{email}"></p>
   <button type="submit">Creat</button>

@@ -26,4 +26,9 @@ public class ServiceBook implements IServiceBook {
     public void creatNewBook(Book book) {
         repositoryBook.save(book);
     }
+
+    @Override
+    public void payBook(Book book) {
+        repositoryBook.save(book);
+    }
 }

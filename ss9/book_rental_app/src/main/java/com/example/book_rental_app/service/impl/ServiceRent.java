@@ -35,4 +35,9 @@ public class ServiceRent implements IServiceRent  {
         }
         return code;
     }
+
+    @Override
+    public void delelteRent(Rent rent) {
+        repositoryRent.delete(rent);
+    }
 }

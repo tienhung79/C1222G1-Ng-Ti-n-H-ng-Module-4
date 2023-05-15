@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport"
@@ -10,8 +10,9 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<form action="/home/giveBook">
+<form action="/home/giveBook" th:object="${book}">
     <span>Fill your book'code</span>
+    <input th:field="*{id}" type="hidden">
     <input type="number" name="code" >
     <button type="submit"> Pay </button>
 </form>

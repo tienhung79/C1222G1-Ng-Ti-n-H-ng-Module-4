@@ -19,9 +19,9 @@ import java.util.List;
 @RequestMapping("/home")
 public class ControllerRentBook {
     @Autowired
-   private IServiceBook serviceBook;
+    private IServiceBook serviceBook;
     @Autowired
-   private IServiceRent serviceRent;
+    private IServiceRent serviceRent;
 
     @GetMapping("")
     public String disPlay(Model model) {
@@ -55,15 +55,7 @@ public class ControllerRentBook {
         book.setList(rentList);
 
         serviceBook.creatNewBook(book);
-        Logger logger = new Logger();
-       model.addAttribute("cusomerList",logger.checkRent())
         return "redirect:/home";
-    }
-
-    @GetMapping("/giveBackBook")
-    public String giveBack() {
-
-        return "/fill_code_book";
     }
 
     @ExceptionHandler(ExceptionWhenToRent.class)
@@ -71,14 +63,23 @@ public class ControllerRentBook {
         return ("/dis_play_exception_when_to_rent");
     }
 
+    @GetMapping("/giveBackBook/{id}")
+    public String giveBack(@PathVariable int id, Model model) {
+        Book book = serviceBook.getById(id);
+        model.addAttribute("book",book);
+        return "/fill_code_book";
+    }
+
     @GetMapping("/giveBook")
-    public String giveBook(@RequestParam(value = "code") int code) throws ExceptionWhenToGiveBack {
-//        List<Rent> rentList = book.getList();
-        List<Book> bookList = serviceBook.getAll();
+    public String giveBook(@RequestParam(value = "code") int code, @RequestParam(value = "id") int id) throws ExceptionWhenToGiveBack {
+        Book book = serviceBook.getById(id);
         List<Rent> rentList = serviceRent.getAll();
         for (int i = 0; i < rentList.size(); i++) {
             if (rentList.get(i).getCode() == code) {
-                rentList.get(i).getId();
+                book.setCountOfBook(book.getCountOfBook()+1);
+                serviceBook.payBook(book);
+                Rent rent = serviceRent.getById(rentList.get(i).getId());
+                serviceRent.delelteRent(rent);
                 return "redirect:/home";
 
             }

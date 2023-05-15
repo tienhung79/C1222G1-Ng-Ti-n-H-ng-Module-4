@@ -16,7 +16,7 @@ public class Logger {
     }
     @AfterThrowing("writeLogOnGettingRentBook()")
     public void checkException(){
-        System.out.println("-------------");
+        System.out.println("--------3-----");
         System.out.println("Not enough book for rent");
     }
     @After("writeLogOnGettingRentBook()")

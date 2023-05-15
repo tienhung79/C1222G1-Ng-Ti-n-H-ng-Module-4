@@ -35,11 +35,16 @@ public class ControllerLogin {
     }
     @PostMapping("/saveUser")
     public String creat(@Validated @ModelAttribute("user") UserDTO userDTO,BindingResult bindingResult, Model model){
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("user", userDTO);
+            return "/creat";
+        }
         new UserDTO().validate(userDTO,bindingResult);
         if (bindingResult.hasErrors()) {
             model.addAttribute("user", userDTO);
             return "/creat";
         }
+
         User user = new User();
         BeanUtils.copyProperties(userDTO,user);
         serviceLogin.creatUser(user);
@@ -58,11 +63,12 @@ public class ControllerLogin {
 
     @PostMapping("/update")
     public String update(@Validated @ModelAttribute("userDTO") UserDTO userDTO, BindingResult bindingResult, Model model) {
-        new UserDTO().validate(userDTO,bindingResult);
         if (bindingResult.hasErrors()) {
             model.addAttribute("userDTO", userDTO);
             return "/update";
         }
+
+        new UserDTO().validate(userDTO,bindingResult);
         User login = new User();
         BeanUtils.copyProperties(userDTO, login);
         serviceLogin.update(login);
