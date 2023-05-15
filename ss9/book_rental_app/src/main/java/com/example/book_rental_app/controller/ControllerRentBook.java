@@ -39,7 +39,6 @@ public class ControllerRentBook {
         Rent rent = new Rent();
         int code = serviceRent.checkCodeToRent();
 
-
         rent.setCode(code);
 
         long time = System.currentTimeMillis();
@@ -47,6 +46,8 @@ public class ControllerRentBook {
 
         serviceRent.creatNewRent(rent);
 
+        Rent rent1 = serviceRent.findRentById(rent.getId());
+        model.addAttribute("codeOfRent", rent1);
 
         book.setCountOfBook(book.getCountOfBook() - 1);
 
@@ -66,7 +67,7 @@ public class ControllerRentBook {
     @GetMapping("/giveBackBook/{id}")
     public String giveBack(@PathVariable int id, Model model) {
         Book book = serviceBook.getById(id);
-        model.addAttribute("book",book);
+        model.addAttribute("book", book);
         return "/fill_code_book";
     }
 
@@ -74,22 +75,20 @@ public class ControllerRentBook {
     public String giveBook(@RequestParam(value = "code") int code, @RequestParam(value = "id") int id) throws ExceptionWhenToGiveBack {
         Book book = serviceBook.getById(id);
         List<Rent> rentList = serviceRent.getAll();
+        int codeCheck = serviceRent.getByCode(code);
         for (int i = 0; i < rentList.size(); i++) {
             if (rentList.get(i).getCode() == code) {
-                book.setCountOfBook(book.getCountOfBook()+1);
+                book.setCountOfBook(book.getCountOfBook() + 1);
                 serviceBook.payBook(book);
-                Rent rent = serviceRent.getById(rentList.get(i).getId());
-                serviceRent.delelteRent(rent);
                 return "redirect:/home";
-
             }
         }
         throw new ExceptionWhenToGiveBack();
     }
 
     @ExceptionHandler(ExceptionWhenToGiveBack.class)
-    public ModelAndView catchExceptionWhenToGiveBack() {
-        return new ModelAndView("/display_exception_when_to_give_back");
+    public String catchExceptionWhenToGiveBack() {
+        return ("/display_exception_when_to_give_back");
     }
 
 }

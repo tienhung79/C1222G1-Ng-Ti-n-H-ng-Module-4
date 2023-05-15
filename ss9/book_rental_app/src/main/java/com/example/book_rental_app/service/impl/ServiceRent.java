@@ -31,6 +31,7 @@ public class ServiceRent implements IServiceRent  {
         for (int i = 0; i < rentList.size(); i++) {
             if (code == rentList.get(i).getCode()) {
                 code = (int) (Math.random() * (99999 - 10000) + 10000);
+                i = 0;
             }
         }
         return code;
@@ -39,5 +40,15 @@ public class ServiceRent implements IServiceRent  {
     @Override
     public void delelteRent(Rent rent) {
         repositoryRent.delete(rent);
+    }
+
+    @Override
+    public Rent findRentById(int id) {
+        return repositoryRent.findById(id).get();
+    }
+
+    @Override
+    public int getByCode(int code) {
+        return repositoryRent.findByCode(code);
     }
 }

@@ -13,4 +13,9 @@ public interface IServiceRent {
     int checkCodeToRent();
 
     void delelteRent(Rent rent);
+
+
+    Rent findRentById(int id);
+
+    int getByCode(int code);
 }
