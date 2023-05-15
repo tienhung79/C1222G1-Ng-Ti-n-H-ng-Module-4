@@ -22,7 +22,7 @@ public class MusicDTO implements Validator {
 
     @NotNull
     @Size(max = 1000)
-    @Pattern(regexp = "[^,]*")
+    @Pattern(regexp = "^((?=[A-Za-z0-9])(?![_\\\\-]).)$", message = "Không được chứa các kí tự đặc biệt")
     private String category;
 
     public MusicDTO() {
