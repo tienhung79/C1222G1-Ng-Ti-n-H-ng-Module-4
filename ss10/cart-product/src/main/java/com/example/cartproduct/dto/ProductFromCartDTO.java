@@ -2,16 +2,18 @@ package com.example.cartproduct.dto;
 
 public class ProductFromCartDTO {
     private int id;
-
+    private String img;
     private String nameProductFromCartDTO;
     private long priceProductFromCartDTO;
     private int quantityProductFromCartDTO;
 
+
     public ProductFromCartDTO() {
     }
 
-    public ProductFromCartDTO(int id, String nameProductFromCartDTO, long priceProductFromCartDTO, int quantityProductFromCartDTO) {
+    public ProductFromCartDTO(int id, String img, String nameProductFromCartDTO, long priceProductFromCartDTO, int quantityProductFromCartDTO) {
         this.id = id;
+        this.img = img;
         this.nameProductFromCartDTO = nameProductFromCartDTO;
         this.priceProductFromCartDTO = priceProductFromCartDTO;
         this.quantityProductFromCartDTO = quantityProductFromCartDTO;
@@ -23,6 +25,14 @@ public class ProductFromCartDTO {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getNameProductFromCartDTO() {

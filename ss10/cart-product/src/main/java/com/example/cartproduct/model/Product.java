@@ -13,16 +13,30 @@ public class Product {
 
     private String name;
     private long price;
-    private int quantity;
+    private String img;
 
     public Product() {
     }
 
-    public Product(int id, String name, long price, int quantity) {
+    public Product(int id, String name, long price) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
+    }
+
+    public Product(int id, String name, long price, String img) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.img = img;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public int getId() {
@@ -47,13 +61,5 @@ public class Product {
 
     public void setPrice(long price) {
         this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }
