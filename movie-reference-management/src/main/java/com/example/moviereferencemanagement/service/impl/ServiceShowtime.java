@@ -21,4 +21,9 @@ public class ServiceShowtime implements IServiceShowtime {
     public void creatShowtime(Showtime showtime) {
         repositoryShowtime.save(showtime);
     }
+
+    @Override
+    public void deleteById(int id) {
+        repositoryShowtime.deleteById(id);
+    }
 }

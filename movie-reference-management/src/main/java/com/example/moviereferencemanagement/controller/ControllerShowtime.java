@@ -7,10 +7,7 @@ import com.example.moviereferencemanagement.service.IServiceShowtime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.jws.WebParam;
 import java.util.List;
@@ -41,6 +38,11 @@ public class ControllerShowtime {
     @PostMapping("/creat")
     public String creat(@ModelAttribute Showtime showtime){
         serviceShowtime.creatShowtime(showtime);
+        return "redirect:/home";
+    }
+    @GetMapping("/delete")
+    public String deleteById(@RequestParam(value = "idDelete") int id ) {
+            serviceShowtime.deleteById(id);
         return "redirect:/home";
     }
 }

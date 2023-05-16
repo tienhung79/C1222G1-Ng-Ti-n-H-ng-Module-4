@@ -8,4 +8,6 @@ public interface IServiceShowtime {
     List<Showtime> getAll();
 
     void creatShowtime(Showtime showtime);
+
+    void deleteById(int id);
 }

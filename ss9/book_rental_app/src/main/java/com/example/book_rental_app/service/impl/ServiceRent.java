@@ -49,6 +49,7 @@ public class ServiceRent implements IServiceRent  {
 
     @Override
     public int getByCode(int code) {
-        return repositoryRent.findByCode(code);
+
+        return code;
     }
 }
