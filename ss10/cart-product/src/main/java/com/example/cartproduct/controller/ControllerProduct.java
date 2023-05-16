@@ -90,7 +90,12 @@ public class ControllerProduct {
                 entry.setValue(quantity);
             }
         }
-
+        return "redirect:/home/cart";
+    }
+    @GetMapping("/deleteInCart")
+    public String delete(@RequestParam(value = "idDelete") int id,@SessionAttribute(name = "cartDTO") CartDTO cartDTO) {
+        Map<Integer,Integer> cartMap = cartDTO.getSelectedProducts();
+        cartMap.remove(id);
         return "redirect:/home/cart";
     }
     @GetMapping("/cart")

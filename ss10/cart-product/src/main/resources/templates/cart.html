@@ -50,6 +50,11 @@
                             <button type="submit">Thay đổi</button>
                         </form>
                         </div>
+                        <div>
+                            <button th:onclick="|deleteById(${product.id})|" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modelId">
+                                Xóa
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,7 +62,35 @@
     </div>
     <div class="col-3"></div>
 </div>
+<script>
+    function deleteById(id) {
+        document.getElementById("idDelete").value = id;
+    }
+</script>
 
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modelTitleId"></h4>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có muốn xóa
+            </div>
+            <div class="modal-footer">
+                <form action="/home/deleteInCart">
+                    <input  th:name="idDelete" th:id="idDelete">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="submit" class="btn btn-primary">Xóa</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
