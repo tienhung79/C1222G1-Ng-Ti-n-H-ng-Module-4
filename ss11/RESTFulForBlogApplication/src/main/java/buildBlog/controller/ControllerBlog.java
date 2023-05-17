@@ -1,65 +1,61 @@
 package buildBlog.controller;
 
 import buildBlog.model.Blog;
+import buildBlog.model.CategoryBlog;
 import buildBlog.service.IServiceBlog;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping("/blog")
+@RestController
+@RequestMapping("/api/home")
 public class ControllerBlog {
     @Autowired
-   private IServiceBlog serviceBlog;
+    IServiceCategory serviceCategory;
     @Autowired
-    private IServiceCategory serviceCategory;
-    @GetMapping("/blogHome")
-    public String disPlayBlog(Model model, @PageableDefault(size = 1)Pageable pageable){
-//        Pageable<Blog> blogList = serviceBlog.getAllBlog(pageable);
-//        model.addAttribute("blogList",blogList);
-        Page<Blog> blogPage =serviceBlog.getBlogPage(pageable);
-        model.addAttribute("blogList",blogPage);
-        return "/view";
+    IServiceBlog serviceBlog;
+
+    @GetMapping("/category")
+    public ResponseEntity<List<CategoryBlog>> displayListCategory() {
+        List<CategoryBlog> categoryBlogList = serviceCategory.getAll();
+        if (categoryBlogList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(categoryBlogList, HttpStatus.OK);
+        }
     }
-   @GetMapping("/creatBlog")
-   public String createNewBlog(Model model){
-       Blog blog = new Blog();
-       model.addAttribute("blog",blog);
-       model.addAttribute("categoryList",serviceCategory.getAll());
-       return "/create";
-   }
-   @PostMapping("/creatBlog")
-    public String create(Blog blog){
-        serviceBlog.creatBlog(blog);
-        return "redirect:/blog/blogHome";
-   }
-   @GetMapping("/{id}/updateBlog")
-    public String updateBlog(Model model, @PathVariable(value = "id",required = false) int id){
-       Blog blog = serviceBlog.getBlogById(id);
-       model.addAttribute("categoryList",serviceCategory.getAll());
-       model.addAttribute("blog",blog);
-        return "/updateBlog";
-   }
-   @PostMapping("/update")
-    public String update(Blog blog){
-        serviceBlog.update(blog);
-       return "redirect:/blog/blogHome";
-   }
-   @GetMapping("/delete")
-    public String deleteById(@RequestParam(value = "id") int id){
-        serviceBlog.deleteById(id);
-       return "redirect:/blog/blogHome";
-   }
-//   @GetMapping("/searchByName")
-//    public String searchByName(@RequestParam(value = "name") String name,Model model){
-//      List<Blog> blogList= serviceBlog.searchByName(name);
-//       return "redirect:/blog/blogHome";
-//   }
+
+    @GetMapping("/blog")
+    public ResponseEntity<List<Blog>> displayBlog() {
+        List<Blog> blogList = serviceBlog.getAllBlog();
+        if (blogList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(blogList, HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/blogbyCategory/{nameCategory}")
+    public ResponseEntity<List<Blog>> displayBlogByCategory(@PathVariable(value = "nameCategory") String nameCategory) {
+        List<Blog> blogList = serviceBlog.getAllBlogByCategory(nameCategory);
+        if (blogList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(blogList, HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/blogById/{id}")
+    public ResponseEntity<Blog> displayBlogById(@PathVariable(value = "id") int id) {
+        Blog blog = serviceBlog.getBlogById(id);
+        if (blog == null) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(blog, HttpStatus.OK);
+        }
+    }
 }

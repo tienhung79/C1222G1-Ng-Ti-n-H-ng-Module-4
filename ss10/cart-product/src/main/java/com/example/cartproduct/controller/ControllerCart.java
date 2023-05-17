@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Controller
 @RequestMapping("/home")
 @SessionAttributes(value = "cartDTO")
-public class ControllerProduct {
+public class ControllerCart {
     @ModelAttribute(name = "cartDTO")
     private CartDTO initCartDTO() {
         return new CartDTO();
@@ -85,8 +85,7 @@ public class ControllerProduct {
 
     @GetMapping("/changeQuantity")
     public String changeQuantity(@RequestParam(value = "id") int id
-            ,@RequestParam(value = "quantiry") int quantity ,@SessionAttribute(name = "cartDTO") CartDTO cartDTO) {
-
+            , @RequestParam(value = "quantiry") int quantity , @SessionAttribute(name = "cartDTO") CartDTO cartDTO) {
         for (Map.Entry<Integer, Integer> entry : cartDTO.getSelectedProducts().entrySet()
         ) {
             if (entry.getKey() == id) {
@@ -114,7 +113,9 @@ public class ControllerProduct {
                 .map(e -> new ProductFromCartDTO(e.getKey(),
                         mapProducts.get(e.getKey()).getImg(),
                         mapProducts.get(e.getKey()).getName(),
-                        mapProducts.get(e.getKey()).getPrice(),e.getValue(),mapProducts.get(e.getKey()).getPrice()*e.getValue()))
+                        mapProducts.get(e.getKey()).getPrice(),
+                        e.getValue(),
+                        mapProducts.get(e.getKey()).getPrice()*e.getValue()))
                 .collect(Collectors.toCollection(LinkedList::new));
         long totalBill = serviceProductFromCart.totalBill(productFromCartDTOList);
         model.addAttribute("totalBill",totalBill);

@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <h5 class="card-title" th:text="*{name}"></h5>
                     <p class="card-text" th:text="*{price}"></p>
-                    <a th:href="@{/home/addToCart/{id}(id=${product.getId()})}" class="btn btn-primary">Thêm vào giỏ hàng </a>
+                    <a th:href="@{/home/addToCart/{id}(id=${product.id})}" class="btn btn-primary">Thêm vào giỏ hàng </a>
                 </div>
 
             </div>
