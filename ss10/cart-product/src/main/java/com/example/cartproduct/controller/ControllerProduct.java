@@ -90,7 +90,7 @@ public class ControllerProduct {
         for (Map.Entry<Integer, Integer> entry : cartDTO.getSelectedProducts().entrySet()
         ) {
             if (entry.getKey() == id) {
-                if(entry.getValue()<=0){
+                if(quantity<=0){
                     Map<Integer,Integer> cartMap = cartDTO.getSelectedProducts();
                     cartMap.remove(id);
                     return "redirect:/home/cart";
