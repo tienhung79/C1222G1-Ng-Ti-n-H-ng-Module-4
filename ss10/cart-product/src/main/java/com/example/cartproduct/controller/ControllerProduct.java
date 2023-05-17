@@ -4,6 +4,7 @@ import com.example.cartproduct.dto.CartDTO;
 import com.example.cartproduct.dto.ProductFromCartDTO;
 import com.example.cartproduct.model.Product;
 import com.example.cartproduct.service.IServiceProduct;
+import com.example.cartproduct.service.IServiceProductFromCart;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +26,8 @@ public class ControllerProduct {
     private CartDTO initCartDTO() {
         return new CartDTO();
     }
+    @Autowired
+    IServiceProductFromCart serviceProductFromCart;
     @Autowired
     IServiceProduct serviceProduct;
     private static final String SEPARATOR = "-";
@@ -83,10 +86,16 @@ public class ControllerProduct {
     @GetMapping("/changeQuantity")
     public String changeQuantity(@RequestParam(value = "id") int id
             ,@RequestParam(value = "quantiry") int quantity ,@SessionAttribute(name = "cartDTO") CartDTO cartDTO) {
+
         for (Map.Entry<Integer, Integer> entry : cartDTO.getSelectedProducts().entrySet()
         ) {
             if (entry.getKey() == id) {
-                entry.setValue(quantity);
+                if(entry.getValue()<=0){
+                    Map<Integer,Integer> cartMap = cartDTO.getSelectedProducts();
+                    cartMap.remove(id);
+                    return "redirect:/home/cart";
+                }else {
+                entry.setValue(quantity);}
             }
         }
         return "redirect:/home/cart";
@@ -107,15 +116,9 @@ public class ControllerProduct {
                         mapProducts.get(e.getKey()).getName(),
                         mapProducts.get(e.getKey()).getPrice(),e.getValue(),mapProducts.get(e.getKey()).getPrice()*e.getValue()))
                 .collect(Collectors.toCollection(LinkedList::new));
-
+        long totalBill = serviceProductFromCart.totalBill(productFromCartDTOList);
+        model.addAttribute("totalBill",totalBill);
         model.addAttribute("productFromCartDTOList", productFromCartDTOList);
-        return "/cart";
-    }
-    @GetMapping("/addPayment")
-    public String addPayment(@SessionAttribute(name = "cartDTO") CartDTO cartDTO, Model model) {
-        Set<Integer> productsIds = cartDTO.getSelectedProducts().keySet();
-        Map<Integer, Product> mapProducts = serviceProduct.geProductstById(productsIds).stream().collect(Collectors.toMap(Product::getId, product -> product));
-
         return "/cart";
     }
 }

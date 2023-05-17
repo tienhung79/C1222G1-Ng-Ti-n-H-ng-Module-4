@@ -22,11 +22,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            </ul>
-            <a href="/home/cart"><i style="width: 113px; font-size: xx-large ; color: darkslategray"
-                                    class="fa-solid fa-cart-shopping"></i></a>
+           <i style="width: 113px; font-size: xx-large ; color: darkslategray"
+                 class="fa-solid fa-money-bills" th:text="*{totalBill}"></i>
         </div>
     </div>
 </nav>
@@ -49,7 +46,7 @@
                                 <p>Nhập số lượng muốn thay đổi <button type="submit">Thay đổi</button></p>
                             </form>
                         </div>
-                        <span><strong>Tổng giá</strong></span>
+                        <span><strong>Tổng giá của sản phẩm</strong></span>
                         <p class="card-text" th:text="${product.totalPrice}"></p>
                         <a th:href="@{/home/detail/{id}(id=${product.getId()})}" class="btn btn-primary">Chi tiết </a>
                         <div>
