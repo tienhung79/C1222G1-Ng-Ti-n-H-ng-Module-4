@@ -40,7 +40,7 @@ public class RestControllerBlog {
         }
     }
 
-    @PostMapping("/blogbyCategory/{nameCategory}")
+    @GetMapping("/blogbyCategory/{nameCategory}")
     public ResponseEntity<List<Blog>> disPlayBlogByCategory(@PathVariable(value = "nameCategory") String nameCategory) {
         List<Blog> blogList = serviceBlog.getAllBlogByCategory(nameCategory);
         if (blogList.isEmpty()) {
