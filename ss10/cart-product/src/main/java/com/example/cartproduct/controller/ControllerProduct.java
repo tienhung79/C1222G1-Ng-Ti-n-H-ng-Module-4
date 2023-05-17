@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.security.sasl.SaslServer;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.LinkedList;
@@ -26,7 +25,6 @@ public class ControllerProduct {
     private CartDTO initCartDTO() {
         return new CartDTO();
     }
-
     @Autowired
     IServiceProduct serviceProduct;
     private static final String SEPARATOR = "-";
@@ -81,6 +79,7 @@ public class ControllerProduct {
 
         return "redirect:/home";
     }
+
     @GetMapping("/changeQuantity")
     public String changeQuantity(@RequestParam(value = "id") int id
             ,@RequestParam(value = "quantiry") int quantity ,@SessionAttribute(name = "cartDTO") CartDTO cartDTO) {
@@ -106,9 +105,17 @@ public class ControllerProduct {
                 .map(e -> new ProductFromCartDTO(e.getKey(),
                         mapProducts.get(e.getKey()).getImg(),
                         mapProducts.get(e.getKey()).getName(),
-                        mapProducts.get(e.getKey()).getPrice(),e.getValue()))
+                        mapProducts.get(e.getKey()).getPrice(),e.getValue(),mapProducts.get(e.getKey()).getPrice()*e.getValue()))
                 .collect(Collectors.toCollection(LinkedList::new));
+
         model.addAttribute("productFromCartDTOList", productFromCartDTOList);
+        return "/cart";
+    }
+    @GetMapping("/addPayment")
+    public String addPayment(@SessionAttribute(name = "cartDTO") CartDTO cartDTO, Model model) {
+        Set<Integer> productsIds = cartDTO.getSelectedProducts().keySet();
+        Map<Integer, Product> mapProducts = serviceProduct.geProductstById(productsIds).stream().collect(Collectors.toMap(Product::getId, product -> product));
+
         return "/cart";
     }
 }
