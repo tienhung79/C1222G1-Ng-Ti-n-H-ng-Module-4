@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<input id="search">
+<button onclick="findByName()">Search</button>
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Content</th>
+        <th>Name</th>
+        <th>Category</th>
+    </tr>
+    </thead>
+    <tbody id="Listblog">
+    </tbody>
+</table>
+<button onclick="displayBlog()">Load</button>
+<script src="
+https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js
+"></script>
+
+<script>
+    let page = 0
+
+    function displayBlog() {
+        page++;
+        $.ajax({
+            url: 'http://localhost:8080/home/blog?page=' + (page),
+            type: "get",
+            success: function (blogList) {
+                let blogListStr = "";
+                for (let blogListElement of blogList.content) {
+                    blogListStr += `
+                    <tr>
+                    <td>${blogListElement.id}</td>
+                    <td>${blogListElement.nameBlog}</td>
+                    <td>${blogListElement.contentBlog}</td>
+                    <td>${blogListElement.categoryBlog.name}</td>
+
+                     </tr>
+                    `;
+                }
+                $('#Listblog').html(blogListStr)
+            }
+        })
+    }
+
+    $(document).ready(function () {
+        displayBlog()
+    });
+
+    function findByName(nameToSearch) {
+        nameToSearch = $('#search').val()
+        $.ajax({
+            url: `http://localhost:8080/home/blogbyCategory/${nameToSearch}`,
+            type: "get",
+            success: function (blogList) {
+                let blogListStr = "";
+                for (let blogListElement of blogList) {
+                    blogListStr += `
+                    <tr>
+                    <td>${blogListElement.id}</td>
+                    <td>${blogListElement.nameBlog}</td>
+                    <td>${blogListElement.contentBlog}</td>
+                    <td>${blogListElement.categoryBlog.name}</td>
+                     </tr>
+                    `;
+                }
+                //
+                $('#Listblog').html(blogListStr)
+
+            }
+        })
+    }
+
+    $(document).ready(function () {
+        displayBlog()
+    });
+
+
+</script>
+</body>
+</html>
