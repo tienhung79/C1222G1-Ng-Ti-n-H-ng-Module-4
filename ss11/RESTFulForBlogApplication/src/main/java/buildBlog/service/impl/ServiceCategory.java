@@ -1,7 +1,7 @@
 package buildBlog.service.impl;
 
-import buildBlog.model.CategoryBlog;
-import buildBlog.repository.IRepositoryCagetoryBlog;
+import buildBlog.model.Category;
+import buildBlog.repository.IRepositoryCagetory;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,19 +11,19 @@ import java.util.List;
 @Service
 public class ServiceCategory implements IServiceCategory {
     @Autowired
-    private IRepositoryCagetoryBlog repositoryCagetoryBlog;
+    private IRepositoryCagetory repositoryCagetoryBlog;
     @Override
-    public List<CategoryBlog> getAll() {
+    public List<Category> getAll() {
         return repositoryCagetoryBlog.findAll();
     }
 
     @Override
-    public CategoryBlog getById(int id) {
+    public Category getById(int id) {
         return repositoryCagetoryBlog.findById(id).get();
     }
 
     @Override
-    public void update(CategoryBlog categoryBlog) {
+    public void update(Category categoryBlog) {
          repositoryCagetoryBlog.save(categoryBlog);
     }
 
@@ -33,7 +33,7 @@ public class ServiceCategory implements IServiceCategory {
     }
 
     @Override
-    public Iterable<CategoryBlog> getAllCategory() {
+    public Iterable<Category> getAllCategory() {
         return repositoryCagetoryBlog.findAll();
     }
 }

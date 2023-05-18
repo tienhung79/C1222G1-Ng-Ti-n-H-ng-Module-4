@@ -12,7 +12,7 @@ public class Blog {
 
     @ManyToOne
     @JoinColumn(name = "cagetory_id",referencedColumnName = "id")
-    private CategoryBlog categoryBlog;
+    private Category categoryBlog;
     public Blog() {
     }
 
@@ -22,18 +22,18 @@ public class Blog {
         this.contentBlog = contentBlog;
     }
 
-    public Blog(int id, String nameBlog, String contentBlog, CategoryBlog categoryBlog) {
+    public Blog(int id, String nameBlog, String contentBlog, Category categoryBlog) {
         this.id = id;
         this.nameBlog = nameBlog;
         this.contentBlog = contentBlog;
         this.categoryBlog = categoryBlog;
     }
 
-    public CategoryBlog getCategoryBlog() {
+    public Category getCategoryBlog() {
         return categoryBlog;
     }
 
-    public void setCategoryBlog(CategoryBlog categoryBlog) {
+    public void setCategoryBlog(Category categoryBlog) {
         this.categoryBlog = categoryBlog;
     }
 

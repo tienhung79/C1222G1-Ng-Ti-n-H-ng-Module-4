@@ -1,7 +1,7 @@
 package buildBlog.controller;
 
 import buildBlog.model.Blog;
-import buildBlog.model.CategoryBlog;
+import buildBlog.model.Category;
 import buildBlog.service.IServiceBlog;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +20,8 @@ public class ControllerBlog {
     IServiceBlog serviceBlog;
 
     @GetMapping("/category")
-    public ResponseEntity<List<CategoryBlog>> displayListCategory() {
-        List<CategoryBlog> categoryBlogList = serviceCategory.getAll();
+    public ResponseEntity<List<Category>> displayListCategory() {
+        List<Category> categoryBlogList = serviceCategory.getAll();
         if (categoryBlogList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {

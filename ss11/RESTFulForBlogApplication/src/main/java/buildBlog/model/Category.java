@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class CategoryBlog {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -15,10 +15,10 @@ public class CategoryBlog {
     @JsonBackReference
     private List<Blog> blogList;
 
-    public CategoryBlog() {
+    public Category() {
     }
 
-    public CategoryBlog(int id, String cagetoryBlog) {
+    public Category(int id, String cagetoryBlog) {
         this.id = id;
         this.cagetoryBlog = cagetoryBlog;
     }
