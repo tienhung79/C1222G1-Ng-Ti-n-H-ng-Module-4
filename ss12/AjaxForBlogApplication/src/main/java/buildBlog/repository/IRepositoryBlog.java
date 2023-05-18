@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface IRepositoryBlog extends JpaRepository<Blog,Integer> {
 
-    @Query(value = "select * from blog join category_blog on blog.cagetory_id=category_blog.id where name like (?)",nativeQuery = true)
-    List<Blog> findAllByNameCategory(String nameCategory);
+    @Query(value = "select * from blog join category on blog.cagetory_id=category.id where name_blog like concat ('%',?,'%')",nativeQuery = true)
+    List<Blog> findByNameBlog(String nameBlog);
 }

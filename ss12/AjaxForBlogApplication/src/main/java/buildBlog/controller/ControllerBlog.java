@@ -1,7 +1,7 @@
 package buildBlog.controller;
 
 import buildBlog.model.Blog;
-import buildBlog.model.CategoryBlog;
+import buildBlog.model.Category;
 import buildBlog.service.IServiceBlog;
 import buildBlog.service.IServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +25,8 @@ public class ControllerBlog {
     IServiceBlog serviceBlog;
 
     @GetMapping("/category")
-    public ResponseEntity<List<CategoryBlog>> displayListCategory() {
-        List<CategoryBlog> categoryBlogList = serviceCategory.getAll();
+    public ResponseEntity<List<Category>> displayListCategory() {
+        List<Category> categoryBlogList = serviceCategory.getAll();
         if (categoryBlogList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
@@ -36,16 +36,16 @@ public class ControllerBlog {
 
     @GetMapping("/blog")
     public ResponseEntity<Page<Blog>> getAll(@RequestParam(value = "page") int page, @PageableDefault(size = 1) Pageable pageable){
-        Page<Blog> blogs = serviceBlog.findAllPage(PageRequest.of(0, page));
-        if (blogs.isEmpty()) {
+        Page<Blog> blogPage = serviceBlog.findAllPage(PageRequest.of(0, page));
+        if (blogPage.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
-        return new ResponseEntity<>(blogs, HttpStatus.OK);
+        return new ResponseEntity<>(blogPage, HttpStatus.OK);
     }
 
-    @GetMapping("/blogbyCategory/{nameCategory}")
-    public ResponseEntity<List<Blog>> displayBlogByCategory(@PathVariable(value = "nameCategory") String nameCategory) {
-        List<Blog> blogList = serviceBlog.getAllBlogByCategory(nameCategory);
+    @GetMapping("/blogbyNameBlog/{nameBlog}")
+    public ResponseEntity<List<Blog>> displayBlogByCategory(@PathVariable(value = "nameBlog") String nameBlog) {
+        List<Blog> blogList = serviceBlog.getAllBlogByName(nameBlog);
         if (blogList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
@@ -62,7 +62,6 @@ public class ControllerBlog {
             return new ResponseEntity<>(blog, HttpStatus.OK);
         }
     }
-
 
 
 

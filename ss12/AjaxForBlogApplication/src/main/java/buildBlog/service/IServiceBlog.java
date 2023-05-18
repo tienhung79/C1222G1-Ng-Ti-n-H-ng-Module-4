@@ -19,7 +19,7 @@ public interface IServiceBlog {
 
     Page<Blog> getBlogPage(Pageable pageable);
 
-    List<Blog> getAllBlogByCategory(String nameCategory);
-
     Page<Blog> findAllPage(Pageable pageable);
+
+    List<Blog> getAllBlogByName(String nameBlog);
 }

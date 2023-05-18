@@ -47,13 +47,13 @@ public class ServiceBlog implements IServiceBlog {
     }
 
     @Override
-    public List<Blog> getAllBlogByCategory(String nameCategory) {
-        return repositoryBlog.findAllByNameCategory(nameCategory);
+    public Page<Blog> findAllPage(Pageable pageable) {
+        return repositoryBlog.findAll(pageable);
     }
 
     @Override
-    public Page<Blog> findAllPage(Pageable pageable) {
-        return repositoryBlog.findAll(pageable);
+    public List<Blog> getAllBlogByName(String nameBlog) {
+        return repositoryBlog.findByNameBlog(nameBlog);
     }
 
 

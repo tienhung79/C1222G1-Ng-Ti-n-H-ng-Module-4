@@ -1,17 +1,17 @@
 package buildBlog.service;
 
-import buildBlog.model.CategoryBlog;
+import buildBlog.model.Category;
 
 import java.util.List;
 
 public interface IServiceCategory {
-    List<CategoryBlog> getAll();
+    List<Category> getAll();
 
-    CategoryBlog getById(int id);
+    Category getById(int id);
 
-    void update(CategoryBlog categoryBlog);
+    void update(Category categoryBlog);
 
     void deleteById(int id);
 
-    Iterable<CategoryBlog> getAllCategory();
+    Iterable<Category> getAllCategory();
 }

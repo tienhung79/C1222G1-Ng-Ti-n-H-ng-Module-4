@@ -25,10 +25,10 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js
 "></script>
 
 <script>
-    let page = 0
+    let page = 0;
 
     function displayBlog() {
-        page++;
+        page ++;
         $.ajax({
             url: 'http://localhost:8080/home/blog?page=' + (page),
             type: "get",
@@ -57,7 +57,7 @@ https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js
     function findByName(nameToSearch) {
         nameToSearch = $('#search').val()
         $.ajax({
-            url: `http://localhost:8080/home/blogbyCategory/${nameToSearch}`,
+            url: `http://localhost:8080/home/blogbyNameBlog/${nameToSearch}`,
             type: "get",
             success: function (blogList) {
                 let blogListStr = "";
