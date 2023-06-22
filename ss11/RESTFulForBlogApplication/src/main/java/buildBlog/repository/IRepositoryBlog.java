@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface IRepositoryBlog extends JpaRepository<Blog,Integer> {
 
-    @Query(value = "select * from blog join category_blog on blog.cagetory_id=category_blog.id where cagetory_blog like (?)",nativeQuery = true)
+    @Query(value = "select * from blog join category on blog.cagetory_id=category.id where cagetory_blog = ?",nativeQuery = true)
     List<Blog> findAllByNameCategory(String nameCategory);
 }
